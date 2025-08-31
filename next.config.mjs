@@ -27,12 +27,11 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  output: 'standalone',   // 👈 clave para Cloud Run / Docker
 }
 
 if (userConfig) {
-  // ESM imports will have a "default" property
   const config = userConfig.default || userConfig
-
   for (const key in config) {
     if (
       typeof nextConfig[key] === 'object' &&
