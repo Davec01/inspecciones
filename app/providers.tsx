@@ -1,10 +1,10 @@
-// "use client";
+"use client";
 
-// import { ConvexProvider, ConvexReactClient } from "convex/react";
-// import { ReactNode } from "react";
+// Si luego quieres agregar ThemeProvider u otros, hazlo aquí.
+// Por ahora, solo dejamos un provider vacío que no rompe nada.
 
-// const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+import { ReactNode } from "react";
 
-// export function Providers({ children }: { children: ReactNode }) {
-//   return <ConvexProvider client={convex}>{children}</ConvexProvider>;
-// }
+export function Providers({ children }: { children: ReactNode }) {
+  return <>{children}</>;
+}
